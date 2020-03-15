@@ -6,8 +6,8 @@ Message Digest Assembly Handler
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![ReleaseDate](https://img.shields.io/github/release-date/sfuhrm/message-digest-assembly-handler)](https://github.com/sfuhrm/message-digest-assembly-handler/releases)
 
-This is a Plugin for the [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) that calculates
-Message Digests for the files archived. A possible outcome is a `MD5SUM` file or `SHA256SUM` file.
+This is a plugin for the [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) that calculates
+Message Digests for the files in the archive. A typical possible outcome is a `MD5SUM` file or `SHA256SUM` file.
 
 ### Requirements
 
@@ -41,7 +41,7 @@ In your `pom.xml`, add the `message-digest-assembly-handler` as a dependency to 
 
 #### In your assembly descriptor
 
-In your XML assembly descriptor, add one or more `containerDescriptorHandler` elements:
+In your XML assembly descriptor, add one `containerDescriptorHandler` element:
 
 ```xml
 <?xml version="1.0"?>
