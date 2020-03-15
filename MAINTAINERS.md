@@ -5,4 +5,4 @@ software.
 
 ## Current Maintainers
 
-* [Stephan Fuhrmann](https://github.com/sfuhrm) ([GPG public key](https://github.com/sfuhrm.gpg))
+  * [Stephan Fuhrmann](https://github.com/sfuhrm) ([GPG public key](https://github.com/sfuhrm.gpg))
