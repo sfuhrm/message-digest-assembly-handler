@@ -3,6 +3,7 @@ Message Digest Assembly Handler
 
 [![Build Status](https://travis-ci.org/sfuhrm/message-digest-assembly-handler.svg)](https://travis-ci.org/sfuhrm/message-digest-assembly-handler)
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/message-digest-assembly-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/message-digest-assembly-handler) 
+[![Codacy Badge](https://api.codacy.com/project/badge/Grade/72c6b1b690e846389ab1faf93ff0091e)](https://www.codacy.com/manual/sfuhrm/message-digest-assembly-handler?utm_source=github.com&amp;utm_medium=referral&amp;utm_content=sfuhrm/message-digest-assembly-handler&amp;utm_campaign=Badge_Grade)
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![ReleaseDate](https://img.shields.io/github/release-date/sfuhrm/message-digest-assembly-handler)](https://github.com/sfuhrm/message-digest-assembly-handler/releases)
 
