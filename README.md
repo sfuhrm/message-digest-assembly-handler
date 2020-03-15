@@ -15,7 +15,7 @@ The message-digest-assembly-handler requires at least the following environment:
 * JDK 8 and later
 * Maven-Assembly-Plugin 3.2.0 and later
 
-### Usage
+### Setup
 
 You need to add the handler to your `pom.xml` and your assembly descriptor file.
 Examples are shown in the next subsections.
@@ -60,3 +60,19 @@ In your XML assembly descriptor, add one or more `containerDescriptorHandler` el
     </containerDescriptorHandler>
   </containerDescriptorHandlers>
 ```
+
+### Configuration
+
+The handler declaration in the assembly descriptor
+understands the following configuration parameters:
+
+* `messageDigest`: The name of a MessageDigest algorithm from the JDK.
+  The following lists the MessageDigest algorithms supported by AdoptOpenJDK13:
+  `MD2, MD5, SHA, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256, SHA3-224, SHA3-256, SHA3-384, SHA3-512`.
+* `checksumFile`: The name of the checksum file generated. Typical names are
+  `MD5SUM`, `SHA1SUM`, and so on.
+* `exclusionPattern`: A regular expression that defines what files shall not
+  be handled by this handler. This option is important if you want to create
+  multiple checksum files with multiple `containerDescriptorHandler` sections.
+  You can then exclude the handlers from each other, for example by
+  giving the regex `(MD5SUM|SHA1SUM)`.
