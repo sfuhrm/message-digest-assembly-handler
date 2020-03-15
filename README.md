@@ -59,4 +59,4 @@ In your XML assembly descriptor, add one or more `containerDescriptorHandler` el
       </configuration>
     </containerDescriptorHandler>
   </containerDescriptorHandlers>
-```xml
+```
