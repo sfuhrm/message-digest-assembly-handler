@@ -1,9 +1,11 @@
 <?xml version="1.0"?>
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
+
   <groupId>de.sfuhrm</groupId>
   <artifactId>message-digest-assembly-handler</artifactId>
   <version>0.9.0-SNAPSHOT</version>
+
   <name>MessageDigest Maven Assembly Handler</name>
   <description>Calculates message digest file for the contents in a Maven archiver archive</description>
   <url>https://github.com/sfuhrm/message-digest-assembly-handler</url>
@@ -14,22 +16,26 @@
       <distribution>repo</distribution>
     </license>
   </licenses>
+
   <developers>
     <developer>
       <id>sfuhrm</id>
       <name>Stephan Fuhrmann</name>
     </developer>
   </developers>
+
   <scm>
     <url>https://github.com/sfuhrm/message-digest-assembly-handler.git</url>
     <connection>scm:git:git@github.com:sfuhrm/message-digest-assembly-handler.git</connection>
     <developerConnection>scm:git:git@github.com:sfuhrm/message-digest-assembly-handler.git</developerConnection>
     <tag>HEAD</tag>
   </scm>
+
   <properties>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <jmockit.version>1.49</jmockit.version>
   </properties>
+
   <dependencies>
     <dependency>
       <groupId>org.apache.maven.plugins</groupId>
@@ -55,6 +61,7 @@
       <scope>test</scope>
     </dependency>
   </dependencies>
+
   <build>
     <plugins>
       <plugin>
@@ -129,6 +136,7 @@
       </plugin>
     </plugins>
   </build>
+
   <profiles>
     <profile>
       <id>release</id>
