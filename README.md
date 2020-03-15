@@ -73,7 +73,7 @@ understands the following configuration parameters:
 * `checksumFile`: The name of the checksum file generated. Defaults to
    `MD5SUM`. Typical names are
   `MD5SUM`, `SHA1SUM`, and so on.
-* `exclusionPattern`: A regular expression that defines what files shall not
+* `exclusionRegex`: A regular expression that defines what files shall not
   be handled by this handler. This option is important if you want to create
   multiple checksum files with multiple `containerDescriptorHandler` sections.
   You can then exclude the handlers from each other, for example by
