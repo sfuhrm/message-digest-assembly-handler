@@ -7,7 +7,7 @@ Message Digest Assembly Handler
 [![ReleaseDate](https://img.shields.io/github/release-date/sfuhrm/message-digest-assembly-handler)](https://github.com/sfuhrm/message-digest-assembly-handler/releases)
 
 This is a Plugin for the [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) that calculates
-Message Digests for the files archived. A possible outcome is a 'MD5SUM' file or 'SHA256SUM' file.
+Message Digests for the files archived. A possible outcome is a `MD5SUM` file or `SHA256SUM` file.
 
 ### Requirements
 
