@@ -41,7 +41,7 @@ public abstract class AbstractMessageDigestTest {
     }
 
     @Test
-    public void finalizeArchiveCreationWithNoFiles(@Mocked Archiver archiver) {
+    public void finalizeArchiveCreationWithNoFiles(@Mocked Archiver archiver) throws IOException {
         List<ArchiveEntry> archiveEntries = Collections.emptyList();
 
         new Expectations() {{

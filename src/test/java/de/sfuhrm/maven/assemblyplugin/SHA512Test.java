@@ -19,6 +19,6 @@ public class SHA512Test extends AbstractMessageDigestTest {
 
     @Override
     protected MessageDigestContainerDescriptorHandler newInstance() {
-        return new SHA256();
+        return new SHA512();
     }
 }
