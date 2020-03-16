@@ -18,8 +18,7 @@ public class ListMessageDigestAlgorithmsTest {
     public void listMessageDigestAlgorithms() {
         final String type = MessageDigest.class.getSimpleName();
 
-        final List<Provider.Service> services = Arrays.asList(Security.getProviders())
-                .stream()
+        final List<Provider.Service> services = Arrays.stream(Security.getProviders())
                 .flatMap(provider -> provider.getServices().stream())
                 .filter(service -> service.getType().equalsIgnoreCase(type))
                 .sorted((o1, o2) -> o1.getAlgorithm().compareToIgnoreCase(o2.getAlgorithm()))
