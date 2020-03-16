@@ -26,18 +26,18 @@ Examples are shown in the next subsections.
 In your `pom.xml`, add the `message-digest-assembly-handler` as a dependency to your `maven-assembly-plugin` plugin as described below.
 
 ```xml
-      <plugin>
-        <groupId>org.apache.maven.plugins</groupId>
-        <artifactId>maven-assembly-plugin</artifactId>
-        <version>3.2.0</version>
-        <dependencies>
-          <dependency>
-            <groupId>de.sfuhrm</groupId>
-            <artifactId>message-digest-assembly-handler</artifactId>
-            <version>0.9.1</version>
-          </dependency>
-        </dependencies>
-      </plugin>
+<plugin>
+  <groupId>org.apache.maven.plugins</groupId>
+  <artifactId>maven-assembly-plugin</artifactId>
+  <version>3.2.0</version>
+  <dependencies>
+     <dependency>
+       <groupId>de.sfuhrm</groupId>
+       <artifactId>message-digest-assembly-handler</artifactId>
+       <version>0.9.1</version>
+     </dependency>
+  </dependencies>
+</plugin>
 ```
 
 ### In your assembly descriptor
