@@ -160,7 +160,7 @@ damages for loss of goodwill, work stoppage, computer failure or malfunction, or
 any and all other commercial damages or losses), even if such Contributor has
 been advised of the possibility of such damages.
 
-9. Accepting Warranty or Additional Liability
+### 9. Accepting Warranty or Additional Liability
 
 While redistributing the Work or Derivative Works thereof, You may choose to
 offer, and charge a fee for, acceptance of support, warranty, indemnity, or
@@ -197,4 +197,3 @@ third-party archives.
     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
     See the License for the specific language governing permissions and
     limitations under the License.
-
