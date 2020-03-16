@@ -71,8 +71,8 @@ refer to the shortcuts in the following table.
 | MD5  | `message-digest`  | `MD5SUMS` | Shortcut for MD5  |
 | MD5  | `message-digest-md5`  | `MD5SUMS` |   |
 | SHA |  `message-digest-sha-1`| `SHA1SUMS`|  "SHA" in JDK refers to the SHA-1 algorithm  |
-| SHA-256  | `message-digest-sha-256` | `SHA256SUMS` | SHA-2 |
-| SHA-512  | `message-digest-sha-512` | `SHA512SUMS` | SHA-2 |
+| SHA-256  | `message-digest-sha-2-256` | `SHA256SUMS` | SHA-2 |
+| SHA-512  | `message-digest-sha-2-512` | `SHA512SUMS` | SHA-2 |
 
 Configuration
 --------------
