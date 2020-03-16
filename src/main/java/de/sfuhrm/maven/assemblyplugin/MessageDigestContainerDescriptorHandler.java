@@ -35,7 +35,7 @@ public class MessageDigestContainerDescriptorHandler implements ContainerDescrip
     private final Logger logger = LoggerFactory.getLogger(MessageDigestContainerDescriptorHandler.class);
 
     private String messageDigest = "MD5";
-    private String checksumFile = "MD5SUM";
+    private String checksumFile = "MD5SUMS";
     private Pattern exclusionPattern;
 
     public void setExclusionRegex(String inPattern) {

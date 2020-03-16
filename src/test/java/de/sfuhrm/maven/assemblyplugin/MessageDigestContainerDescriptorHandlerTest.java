@@ -23,7 +23,7 @@ public class MessageDigestContainerDescriptorHandlerTest {
     public void getVirtualFiles() {
         MessageDigestContainerDescriptorHandler instance = new MessageDigestContainerDescriptorHandler();
         List<String> list = instance.getVirtualFiles();
-        assertEquals(Collections.singletonList("MD5SUM"), list);
+        assertEquals(Collections.singletonList("MD5SUMS"), list);
     }
 
     @Test
@@ -34,27 +34,13 @@ public class MessageDigestContainerDescriptorHandlerTest {
         assertEquals(Collections.singletonList("FOO"), list);
     }
 
-    private ResourceIterator iterator(Iterator<ArchiveEntry> entryIterator) {
-        return new ResourceIterator() {
-            @Override
-            public boolean hasNext() {
-                return entryIterator.hasNext();
-            }
-
-            @Override
-            public ArchiveEntry next() {
-                return entryIterator.next();
-            }
-        };
-    }
-
     @Test
     public void finalizeArchiveCreation(@Mocked Archiver archiver, @Mocked ArchiveEntry archiveEntryA, @Mocked ArchiveEntry archiveEntryB) throws IOException {
 
         List<ArchiveEntry> archiveEntries = Arrays.asList(archiveEntryA, archiveEntryB);
 
         new Expectations() {{
-            archiver.getResources(); result = iterator(archiveEntries.iterator());
+            archiver.getResources(); result = Utility.iterator(archiveEntries.iterator());
             archiveEntryA.getName(); result = "test";
             archiveEntryA.getType(); result = ArchiveEntry.FILE;
             archiveEntryA.getInputStream(); result = new ByteArrayInputStream(new byte[0]);
@@ -68,7 +54,7 @@ public class MessageDigestContainerDescriptorHandlerTest {
 
         new Verifications() {{
             File file;
-            archiver.addFile(file = withCapture(), "MD5SUM");
+            archiver.addFile(file = withCapture(), "MD5SUMS");
             // see https://tools.ietf.org/html/rfc1321#appendix-A.5
             assertEquals(Arrays.asList(
                     "900150983cd24fb0d6963f7d28e17f72 *abc",
@@ -83,7 +69,7 @@ public class MessageDigestContainerDescriptorHandlerTest {
         List<ArchiveEntry> archiveEntries = Arrays.asList(archiveEntryA, archiveEntryB);
 
         new Expectations() {{
-            archiver.getResources(); result = iterator(archiveEntries.iterator());
+            archiver.getResources(); result = Utility.iterator(archiveEntries.iterator());
             archiveEntryA.getName(); result = "test";
             archiveEntryA.getType(); result = ArchiveEntry.FILE;
             archiveEntryA.getInputStream(); result = new ByteArrayInputStream(new byte[0]);
@@ -114,8 +100,7 @@ public class MessageDigestContainerDescriptorHandlerTest {
         List<ArchiveEntry> archiveEntries = Collections.singletonList(archiveEntry);
 
         new Expectations() {{
-            archiver.getResources(); result = iterator(archiveEntries.iterator());
-            archiver.getResources(); result = iterator(archiveEntries.iterator());
+            archiver.getResources(); result = Utility.iterator(archiveEntries.iterator());
             archiveEntry.getName(); result = "test";
             archiveEntry.getType(); result = ArchiveEntry.FILE;
         }};
@@ -126,7 +111,7 @@ public class MessageDigestContainerDescriptorHandlerTest {
 
         new Verifications() {{
             File file;
-            archiver.addFile(file = withCapture(), "MD5SUM");
+            archiver.addFile(file = withCapture(), "MD5SUMS");
             assertEquals(0, file.length()); // nothing in file, no matches
         }};
     }
