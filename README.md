@@ -10,14 +10,14 @@ Message Digest Assembly Handler
 This is a plugin for the [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) that calculates
 Message Digests for the files in the archive. A typical possible outcome is a `MD5SUM` file or `SHA256SUM` file.
 
-## Requirements
-
+Requirements
+--------------
 The message-digest-assembly-handler requires at least the following environment:
   * JDK 8 and later
   * Maven-Assembly-Plugin 3.2.0 and later
 
-## Setup
-
+Setup
+--------------
 You need to add the handler to your `pom.xml` and your assembly descriptor file.
 Examples are shown in the next subsections.
 
@@ -62,8 +62,8 @@ In your XML assembly descriptor, add one `containerDescriptorHandler` element:
   </containerDescriptorHandlers>
 ```
 
-## Configuration
-
+Configuration
+--------------
 The handler declaration in the assembly descriptor
 understands the following configuration parameters:
 

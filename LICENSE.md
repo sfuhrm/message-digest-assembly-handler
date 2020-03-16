@@ -4,7 +4,8 @@ Apache License
 _Version 2.0, January 2004_  
 _&lt;<http://www.apache.org/licenses/>&gt;_
 
-## Terms and Conditions for use, reproduction, and distribution
+Terms and Conditions for use, reproduction, and distribution
+--------------
 
 ### 1. Definitions
 
@@ -159,7 +160,7 @@ damages for loss of goodwill, work stoppage, computer failure or malfunction, or
 any and all other commercial damages or losses), even if such Contributor has
 been advised of the possibility of such damages.
 
-### 9. Accepting Warranty or Additional Liability
+9. Accepting Warranty or Additional Liability
 
 While redistributing the Work or Derivative Works thereof, You may choose to
 offer, and charge a fee for, acceptance of support, warranty, indemnity, or
@@ -172,7 +173,8 @@ accepting any such warranty or additional liability.
 
 _END OF TERMS AND CONDITIONS_
 
-## APPENDIX: How to apply the Apache License to your work
+APPENDIX: How to apply the Apache License to your work
+--------------
 
 To apply the Apache License to your work, attach the following boilerplate
 notice, with the fields enclosed by brackets `[]` replaced with your own
