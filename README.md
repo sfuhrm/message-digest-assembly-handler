@@ -8,7 +8,8 @@ Message Digest Assembly Handler
 [![ReleaseDate](https://img.shields.io/github/release-date/sfuhrm/message-digest-assembly-handler)](https://github.com/sfuhrm/message-digest-assembly-handler/releases)
 
 This is a plugin for the [Maven Assembly Plugin](http://maven.apache.org/plugins/maven-assembly-plugin/) that calculates
-Message Digests for the files in the archive. A typical possible outcome is a `MD5SUM` file or `SHA256SUM` file.
+Message Digests for the files in the archive.
+A typical possible outcome is a `MD5SUMS` file or `SHA256SUMS` file.
 
 Requirements
 --------------
@@ -56,11 +57,21 @@ In your XML assembly descriptor, add one `containerDescriptorHandler` element:
       <handlerName>message-digest</handlerName>
       <configuration>
         <messageDigest>MD5</messageDigest>
-        <checksumFile>MD5SUM</checksumFile>
+        <checksumFile>MD5SUMS</checksumFile>
       </configuration>
     </containerDescriptorHandler>
   </containerDescriptorHandlers>
 ```
+
+Instead of the `handlerName` `"message-digest"` you can also directly
+refer to the shortcuts in the following table.
+
+| Message Digest  | `handlerName` Parameter  | Default checksumFile | Note |
+|---|---|---|---|
+| MD5  | `message-digest-md5`  | `MD5SUMS` |   |
+| SHA |  `message-digest-sha-1`| `SHA1SUMS`|  "SHA" in JDK refers to the SHA-1 algorithm  |
+| SHA-256  | `message-digest-sha-256` | `SHA256SUMS` | SHA-2 |
+| SHA-512  | `message-digest-sha-512` | `SHA512SUMS` | SHA-2 |
 
 Configuration
 --------------
@@ -73,11 +84,11 @@ understands the following configuration parameters:
     `MD2, MD5, SHA, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256, SHA3-224, SHA3-256, SHA3-384, SHA3-512`.
 
 *   `checksumFile`: The name of the checksum file generated. Defaults to
-    `MD5SUM`. Typical names are
-    `MD5SUM`, `SHA1SUM`, and so on.
+    `MD5SUMS`. Typical names are
+    `MD5SUMS`, `SHA1SUMS`, and so on.
 
 *   `exclusionRegex`: A regular expression that defines what files shall not
     be handled by this handler. This option is important if you want to create
     multiple checksum files with multiple `containerDescriptorHandler` sections.
     You can then exclude the handlers from each other, for example by
-    giving the regex `(MD5SUM|SHA1SUM)`.
+    giving the regex `(MD5SUMS|SHA1SUMS)`.
