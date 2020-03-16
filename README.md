@@ -71,9 +71,11 @@ understands the following configuration parameters:
     Defaults to `MD5`.
     The following lists the MessageDigest algorithms supported by AdoptOpenJDK13:
     `MD2, MD5, SHA, SHA-224, SHA-256, SHA-384, SHA-512, SHA-512/224, SHA-512/256, SHA3-224, SHA3-256, SHA3-384, SHA3-512`.
+
 *   `checksumFile`: The name of the checksum file generated. Defaults to
     `MD5SUM`. Typical names are
     `MD5SUM`, `SHA1SUM`, and so on.
+
 *   `exclusionRegex`: A regular expression that defines what files shall not
     be handled by this handler. This option is important if you want to create
     multiple checksum files with multiple `containerDescriptorHandler` sections.
