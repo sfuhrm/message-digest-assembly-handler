@@ -15,7 +15,7 @@ Requirements
 --------------
 The message-digest-assembly-handler requires at least the following environment:
 *   JDK 8 and later
-*   Maven-Assembly-Plugin 3.2.0 and later
+*   Maven-Assembly-Plugin 3.2.0 and later as a plugin in your `pom.xml`
 
 Setup
 --------------
