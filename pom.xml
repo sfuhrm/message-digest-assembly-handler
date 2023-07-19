@@ -4,7 +4,7 @@
 
   <groupId>de.sfuhrm</groupId>
   <artifactId>message-digest-assembly-handler</artifactId>
-  <version>0.9.4-SNAPSHOT</version>
+  <version>0.9.3-SNAPSHOT</version>
 
   <name>MessageDigest Maven Assembly Handler</name>
   <description>Calculates message digest file for the contents in a Maven archiver archive</description>
