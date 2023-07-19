@@ -1,6 +1,5 @@
 package de.sfuhrm.maven.assemblyplugin;
 
-import org.apache.commons.codec.binary.Hex;
 import org.apache.maven.plugins.assembly.filter.ContainerDescriptorHandler;
 import org.codehaus.plexus.archiver.ArchiveEntry;
 import org.codehaus.plexus.archiver.Archiver;
@@ -37,6 +36,20 @@ public class MessageDigestContainerDescriptorHandler implements ContainerDescrip
     private String messageDigest = "MD5";
     private String checksumFile = "MD5SUMS";
     private Pattern exclusionPattern;
+
+    private static final char[] DIGITS_LOWER = new char[]{'0', '1', '2', '3', '4', '5', '6', '7', '8', '9', 'a', 'b', 'c', 'd', 'e', 'f'};
+    protected static char[] encodeHex(byte[] data) {
+        int l = data.length;
+        char[] out = new char[l << 1];
+        int i = 0;
+
+        for(int j = 0; i < l; ++i) {
+            out[j++] = DIGITS_LOWER[(240 & data[i]) >>> 4];
+            out[j++] = DIGITS_LOWER[15 & data[i]];
+        }
+
+        return out;
+    }
 
     public void setExclusionRegex(String inPattern) {
         this.exclusionPattern = Pattern.compile(inPattern);
@@ -94,7 +107,7 @@ public class MessageDigestContainerDescriptorHandler implements ContainerDescrip
                 keys.sort(String.CASE_INSENSITIVE_ORDER);
 
                 for (String key : keys) {
-                    writer.append(new String(Hex.encodeHex(fileCatalog.get(key))))
+                    writer.append(new String(encodeHex(fileCatalog.get(key))))
                             .append(" *")
                             .append(key)
                             .append("\n");
