@@ -3,6 +3,7 @@ name: Release
 
 on:
   push:
+    branches: [ master ]
     tags:
       - 'message-digest-assembly-handler-[0-9]+*'
 
