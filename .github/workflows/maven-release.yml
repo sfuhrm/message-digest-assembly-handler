@@ -40,43 +40,22 @@ jobs:
       with:
         name: message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
         path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
-    - uses: actions/create-release@v1
-      id: create_release
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        tag_name: ${{ github.ref }}
-        release_name: ${{ github.ref }}
-        draft: true
-        body: |
-          # Release ${{ steps.version.outputs.version }}
-          ## Changes
-          
-          * 1
-          * 2
-          * 3
 
-    - uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+    - run: |
+            cat > body.txt  <<InputComesFromHERE
+            # Release ${{ steps.version.outputs.version }}
+            ## Changes
+            
+            * 1
+            * 2
+            * 3
+            InputComesFromHERE
+    - name: Release
+      uses: softprops/action-gh-release@v2
       with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}.jar
-        asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}.jar
-        asset_content_type: application/java-archive
-    - uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-sources.jar
-        asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}-sources.jar
-        asset_content_type: application/java-archive
-    - uses: actions/upload-release-asset@v1
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      with:
-        upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
-        asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
-        asset_content_type: application/java-archive
+        body_path: body.txt
+        token: ${{ secrets.GITHUB_TOKEN }}
+        files: |
+            target/message-digest-assembly-handler-${{ steps.version.outputs.version }}.jar
+            target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-sources.jar
+            target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
