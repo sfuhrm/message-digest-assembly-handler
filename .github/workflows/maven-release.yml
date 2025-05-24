@@ -61,7 +61,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/sudoku-${{ steps.version.outputs.version }}.jar
+        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}.jar
         asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
@@ -69,7 +69,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/sudoku-${{ steps.version.outputs.version }}-sources.jar
+        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-sources.jar
         asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}-sources.jar
         asset_content_type: application/java-archive
     - uses: actions/upload-release-asset@v1
@@ -77,6 +77,6 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       with:
         upload_url: ${{ steps.create_release.outputs.upload_url }}
-        asset_path: target/sudoku-${{ steps.version.outputs.version }}-javadoc.jar
+        asset_path: target/message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
         asset_name: message-digest-assembly-handler-${{ steps.version.outputs.version }}-javadoc.jar
         asset_content_type: application/java-archive
