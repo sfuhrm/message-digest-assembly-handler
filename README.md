@@ -35,7 +35,7 @@ In your `pom.xml`, add the `message-digest-assembly-handler` as a dependency to 
      <dependency>
        <groupId>de.sfuhrm</groupId>
        <artifactId>message-digest-assembly-handler</artifactId>
-       <version>0.9.2</version>
+       <version>1.0.0</version>
      </dependency>
   </dependencies>
 </plugin>
