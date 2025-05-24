@@ -2,6 +2,7 @@ Message Digest Assembly Handler
 ===================
 
 [![Java CI with Maven](https://github.com/sfuhrm/message-digest-assembly-handler/actions/workflows/maven-ref.yml/badge.svg)](https://github.com/sfuhrm/message-digest-assembly-handler/actions/workflows/maven-ref.yml)
+[![Coverage](https://raw.githubusercontent.com/sfuhrm/message-digest-assembly-handler/gh-pages/jacoco.svg)]() 
 [![Maven Central](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/message-digest-assembly-handler/badge.svg)](https://maven-badges.herokuapp.com/maven-central/de.sfuhrm/message-digest-assembly-handler) 
 [![License](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
 [![ReleaseDate](https://img.shields.io/github/release-date/sfuhrm/message-digest-assembly-handler)](https://github.com/sfuhrm/message-digest-assembly-handler/releases)
